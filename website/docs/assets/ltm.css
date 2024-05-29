@@ -1,0 +1,102 @@
+#map { 
+    /*height: 180px;*/
+    height: 70vh;
+    /* width: 100vw; */
+    color: red;
+}
+
+.reference {
+    font-weight: bold;
+}
+
+.config-container {
+    margin: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* .radio-label, .checkbox-label {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem;
+  } */
+.radio-label input[type="radio"], .checkbox-label input[type="checkbox"] {
+    margin-right: 0.5rem;
+}
+
+.dropdown-item {
+    flex: 1;
+    min-width: 200px;
+}
+
+.dropdown-item label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/* Styling for select elements */
+.dropdown-item select {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+.text-content {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+.app-content {
+    max-width: 1500px;
+    margin: 50px auto;
+}
+
+@media screen and (min-width: 1800px) {
+    .app-content {
+        max-width: unset;
+    }
+    .app-container {
+        display: flex;
+        align-items: flex-end;
+        gap: 2rem;
+        max-width: unset;
+    }
+
+    .app-container-map {
+        flex: 1;
+        overflow: hidden;
+    }
+
+    .app-container-table {
+        width: 700px;
+    }
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+.leaflet-container {
+    /* height: 400px;
+    width: 600px; */
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.popup-gridjs-container {
+    max-height: 300px; /* Adjust this value as needed */
+    overflow-y: auto;
+}
+
+/*######### Modifications to default css ######### */
+
+/* apparently necessary even though already set in javascript */
+.leaflet-popup-content {
+    width: 400px;
+}
+
+.main-content {
+    max-width: unset;
+}
