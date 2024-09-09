@@ -88,6 +88,7 @@ class Map {
                 summary: true
             },
             search: true,
+            language: gridjs.l10n.frFR
             //sort: true // deactivated as forcerender is buggy with this option set
         }).render(directoryTable)
         this.directoryTable.on('rowClick', (event, data) => this.map.flyTo(data._cells[4].data, 27));
@@ -124,7 +125,8 @@ class Map {
                             data: feature.getPeople().map(person => [person.lastname, person.firstname, person.job]),
                             className: {
                                 container: 'popup-gridjs-container',
-                              }
+                              },
+                            language: gridjs.l10n.frFR
                         }).render(document.getElementById("table-" + feature.getId()));
                         setTimeout(function() {
                             //It's a hack to call a private function, but I don't know how to do otherwise.
